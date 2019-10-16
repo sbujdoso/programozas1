@@ -46,7 +46,7 @@ int main(){
 		//9. Írjon példát az első 10 egész szám beolvasására while ciklussal!
     while(i<10){
 			printf("Kerem a %d. számot:", i+1);
-            scanf("%d", &alma[i]);
+			scanf("%d", &alma[i]);
 			i++;
 	}
 
@@ -71,8 +71,6 @@ int main(){
 		//16. Írja ki az alma elnevezésű 4x4 egész elemű mátrix értékeit a képernyőre az elrendezés megtartása
 		//mellett!
 	
-		//17. Írja ki az alma elnevezésű 4x4 egész elemű mátrix értékeit egy file-ba az elrendezés megtartása
-		//mellett! (Vegye úgy, hogy a file már létre van hozva!)
 	int almak[4][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 0, 1, 2}, {3, 4, 5, 6}}; //valtozo deklaraciok csak hogy lefusson a program
 	int k,l; //index valtozok
 	//tenlyeges feladat:
@@ -84,6 +82,8 @@ int main(){
 	
 
 	printf("\n---\n");
+		//17. Írja ki az alma elnevezésű 4x4 egész elemű mátrix értékeit egy file-ba az elrendezés megtartása
+		//mellett! (Vegye úgy, hogy a file már létre van hozva!)
 		//18. Soroljon fel legalább 3 példát arra az esetre, amikor nem kötelező a ; (pontosvessző) használata!
 		//19. Milyen utasítást használhat kommentek beírására? (Írjon példát! :) )
 		//20. Írjon példát feltételes utasításra!
