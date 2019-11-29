@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
 int main(){
 
@@ -145,6 +146,9 @@ int main(){
 		//29. Adott egy alma elnevezésű 10 elemű vektor képezze az elemek abszolút értékét és tárolja el az alma
 		//vektorban!
 		//30. Adott egy 3 elemű e vektor. Képezze az egységvektorát és tárolja el az e0 vektorban!
+		int e[3] = {1, 2, 3};
+		int e0[3] = {0, 0, 0};
+
 		//33. Milyen header állományt kell használnia matematikai függvények használata esetén?
 		//34. Írjon példát, milyen esetben kell szögletes zárójelet használni!
 		//35. Írjon példát, milyen esetben kell kapcsos zárójelet használni!
@@ -152,4 +156,9 @@ int main(){
 		//37. Írjon programsort, ami az adat változó értékét 5-szörösére növeli!
 		//38. Írjon programrészletet, ami az alma nevű lebegőpontos elemeket tartalmazó 360 elemű vektort
 		//feltölti a sinus függvény értékeivel!
+		float almas[360];
+		for(i=0;i<360;i++) almas[i]=sin(M_PI * i / 180.0);
+
+		//kiiras a kepernyore, nem resze a feladatnak:
+		for(i=0;i<360;i++) printf("alma[%3d]= %f\n", i, almas[i]);
 }

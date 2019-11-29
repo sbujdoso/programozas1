@@ -8,7 +8,7 @@ PROGS = $(patsubst %.c, %.out, $(wildcard *.c))
 default: $(TARGET)
 
 %.out: %.c 
-	$(CC) $(CFLAGS) $< -o $@
+	$(CC) $(CFLAGS) $(LIBS) $< -o $@
 
 $(TARGET): $(PROGS)
 
