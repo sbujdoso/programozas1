@@ -12,7 +12,7 @@ int main(){
 	float f;
 
 		//2. Írjon programsort karakter típusú változó deklarálására!
-	char c;
+	char ch;
 
 		//3. Írjon programsort egész típusú változó deklarálására!
 	int i;
@@ -40,12 +40,12 @@ int main(){
 
 		//8. Írjon példát az első 10 egész szám beolvasására for ciklussal!
     for(i=0; i<10; i++){
-			printf("Kerem a %d. számot:", i+1);
+			printf("Kerem a %d. szamot:", i+1);
 			scanf("%d", &alma[i]);
 	}
 		//9. Írjon példát az első 10 egész szám beolvasására while ciklussal!
     while(i<10){
-			printf("Kerem a %d. számot:", i+1);
+			printf("Kerem a %d. szamot:", i+1);
 			scanf("%d", &alma[i]);
 			i++;
 	}
@@ -84,6 +84,20 @@ int main(){
 	printf("\n---\n");
 		//17. Írja ki az alma elnevezésű 4x4 egész elemű mátrix értékeit egy file-ba az elrendezés megtartása
 		//mellett! (Vegye úgy, hogy a file már létre van hozva!)
+	//Nem része a feladatnak, k, l, almak[][] fent definialt!
+	FILE *fpalma;
+	fpalma = fopen("alma_m.txt","w");
+    //feladat:
+	for(k=0; k<4; k++){
+			for(l=0; l<4; l++) fprintf(fpalma, "%d ", almak[k][l]);
+			fprintf(fpalma, "\n");
+	}
+	// nem resze a feladatnak:
+	fclose(fpalma);
+
+
+
+
 		//18. Soroljon fel legalább 3 példát arra az esetre, amikor nem kötelező a ; (pontosvessző) használata!
 		//19. Milyen utasítást használhat kommentek beírására? (Írjon példát! :) )
 		//20. Írjon példát feltételes utasításra!
@@ -102,6 +116,30 @@ int main(){
 		//elnevezésű változóban tárolja!
 		//27. Írjon programrészletet, ami összeszorozza az a és b 2x2-es mátrixokat és az eredményt a c mátrixban
 		//tárolja!
+		//Elokeszites, nem resze a feladatnak:
+		int j;
+		int a[2][2] = {{1,2},{3,4}};
+		int b[2][2] = {{5,6},{7,8}};
+		int c[2][2] = {{0,0},{0,0}};
+		//
+		//  c(i,j) elem a(i) sorának és b(j) oszlopának skaláris szorzata
+		//Feladat:
+		for(i=0; i<2; i++){
+				for(j=0; j<2; j++){
+						for(k=0;k<2; k++) {
+								c[i][j] += a[i][k]* b[k][j];
+						}
+				}
+		}
+
+		// nem resze a feladatnak, kiirjuk:
+		printf("\n---\nVektor szorzat 2x2:\n");
+		for(i=0; i<2; i++){
+				for(j=0; j<2; j++) printf("%d ",c[i][j]);
+				printf("\n");
+		}
+
+		
 		//28. Keresse meg és tárolja a maximum elnevezésű változóban a vektor nevű 10 elemű vektor
 		//legnagyobb abszolút értékű elemét!
 		//29. Adott egy alma elnevezésű 10 elemű vektor képezze az elemek abszolút értékét és tárolja el az alma
