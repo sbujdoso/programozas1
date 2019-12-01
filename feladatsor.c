@@ -100,13 +100,41 @@ int main(){
 
 
 		//18. Soroljon fel legalább 3 példát arra az esetre, amikor nem kötelező a ; (pontosvessző) használata!
+		// blokk nyitasa es zarasa { } -el.
+		//
+		// switch utasítás esetén a case ...: sorok végén
+		//
+		// #include <> direktívák után
+		//
+
 		//19. Milyen utasítást használhat kommentek beírására? (Írjon példát! :) )
+		// "//" egysoros komment
+		// "/* ...  */" egy vagy tobb soros komment
+
 		//20. Írjon példát feltételes utasításra!
+		if(i == 0) printf("vlaami");
+
 		//21. Írjon programrészletet, amely az eper változó értékét az alábbi módon módosítja:
 		//Ha felt = 0 eper állandó marad,
 		//Ha felt > 0 eper egyel nő,
 		//Ha felt < 0 eper egyel csökken.
+		int felt = 1;
+		int eper = 0;
+
+		if (felt > 0) {
+				eper += 1;
+		}
+		else if (felt < 0) {
+				eper -= 1;
+		}
+		else if (felt == 0){
+				//nem szukseges ez a feltetel!
+				eper = eper;
+		}
+
 		//22. Írjon programsort, ami beolvas egy karaktert a billentyűzetről!
+		scanf("%c", &ch);
+		printf("\n:%c \n", ch);
 		//23. Írjon programrészletet, ami az adott adat egész elemű vektor elemeinek átlagát
 		//kiszámolja és beírja az átlag (lebegőpontos) változóba!
 		//24. Írjon programrészletet, ami összeszorozza 1-tol 10-ig az egész számokat és az eredményt
@@ -143,17 +171,42 @@ int main(){
 		
 		//28. Keresse meg és tárolja a maximum elnevezésű változóban a vektor nevű 10 elemű vektor
 		//legnagyobb abszolút értékű elemét!
+		int vektor[10] = { 0, 1, 2, 3, -4, 3, 2, -1, 0, 1};
+		int maximum = 0;
+		for(i=0; i<10; i++) if (abs(vektor[i]) > abs(maximum)) maximum =  vektor[i];  //Figyelem az abszolut ertek nem eleme a vektornak!
+		printf("Maximum: %d \n", maximum);
+
 		//29. Adott egy alma elnevezésű 10 elemű vektor képezze az elemek abszolút értékét és tárolja el az alma
 		//vektorban!
+        int almaa[10] = {1, -2, 3, -4, 5, -6, 7, -8, 9, -10};
+		for(i=0; i<10; i++) almaa[i] = abs(almaa[i]);
+
 		//30. Adott egy 3 elemű e vektor. Képezze az egységvektorát és tárolja el az e0 vektorban!
 		int e[3] = {1, 2, 3};
 		int e0[3] = {0, 0, 0};
 
 		//33. Milyen header állományt kell használnia matematikai függvények használata esetén?
+		// math.h
+
 		//34. Írjon példát, milyen esetben kell szögletes zárójelet használni!
+		//vektor indexenek jelolese
+
 		//35. Írjon példát, milyen esetben kell kapcsos zárójelet használni!
+		// utasitas blokkok megadasa pl for ciklushoz
+		// fuggveny torzsenek megadasa
+		// vektorok ertekenek inicializalasa a deklaralas soran
+
 		//36. Írjon példát, milyen esetben kell sima zárójelet használni!
+		//for(i = 1; i< 99; i++){...}
+		//fuggveny hivas: sin(x)
+		//matematikai muveletek precedenciajanak megadasa: 2 * (1+3)
+
 		//37. Írjon programsort, ami az adat változó értékét 5-szörösére növeli!
+		int adat = 5;
+
+		adat *= 5; //vagy:
+		adat = adat * 5;
+
 		//38. Írjon programrészletet, ami az alma nevű lebegőpontos elemeket tartalmazó 360 elemű vektort
 		//feltölti a sinus függvény értékeivel!
 		float almas[360];
